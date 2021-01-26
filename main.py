@@ -1,5 +1,24 @@
 import random
 
+liushisigua = {
+    0b000000: ('䷁', '坤'),
+    0b000001: ('䷖', '剥'),
+    0b000010: ('䷇', '比'),
+    0b000011: ('䷓', '观'),
+    0b000100: ('䷏', '豫'),
+    0b000101: ('䷢', '晋'),
+    0b000110: ('䷬', '萃'),
+    0b000111: ('䷋', '否'),
+    0b001000: ('䷎', '谦'),
+    0b001001: ('䷳', '艮'),
+    0b001010: ('䷦', '蹇'),
+    0b001011: ('䷴', '渐'),
+    0b001100: ('䷽', '小过'),
+    0b001101: ('䷷', '旅'),
+    0b001110: ('䷞', '咸'),
+    0b001111: ('䷠', '遁'),
+}
+
 
 def qigua():
     a = random.randint(0, 1)
@@ -23,9 +42,24 @@ def qigua():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    yao = ['', '', '', '', '', '']
+    gua = ['', '', '', '', '', '']
+    bengua = ['', '', '', '', '', '']
+    biangua = ['', '', '', '', '', '']
     for i in range(6):
-        yao[i] = qigua()
-    print(yao)
+        y = qigua()
+        gua[i] = y
+        if y == '⚋' or y == '⚊':
+            bengua[i] = y
+            biangua[i] = y
+        elif y == 'o':
+            bengua[i] = '⚊'
+            biangua[i] = '⚋'
+        elif y == 'x':
+            bengua[i] = '⚋'
+            biangua[i] = '⚊'
+
+    print(gua)
+    print(bengua)
+    print(biangua)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
