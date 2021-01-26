@@ -58,8 +58,18 @@ if __name__ == '__main__':
             bengua[i] = '⚋'
             biangua[i] = '⚊'
 
+    y2i = {'⚋': '0', '⚊': '1'}
+
     print(gua)
     print(bengua)
+    bengua_idx = int(''.join([y2i[y] for y in bengua]), 2)
+    if bengua_idx in liushisigua:
+        print(liushisigua[bengua_idx])
     print(biangua)
+    biangua_idx = int(''.join([y2i[y] for y in biangua]), 2)
+    if biangua_idx in liushisigua:
+        print(liushisigua[biangua_idx])
+
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
